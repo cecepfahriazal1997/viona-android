@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <EditText
+        android:id="@+id/keyword"
+        android:layout_width="match_parent"
+        android:layout_height="?android:actionBarSize"
+        android:background="@drawable/form_control"
+        android:drawableLeft="@drawable/search"
+        android:drawablePadding="16dp"
+        android:drawableTint="@color/grayLvlSeven"
+        android:hint="Search by categroies, deals or ect..."
+        android:padding="16dp"
+        android:singleLine="true"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="14dp" />
+</RelativeLayout>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:fontFamily="@font/madani_medium"
+        android:text="Lates deals"
+        android:textColor="@color/black"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/see_all_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/badge_light"
+        android:fontFamily="@font/madani_bold"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="2dp"
+        android:text="View All"
+        android:textColor="@color/white"
+        android:textSize="12dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_latest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/see_all_event"
+        android:layout_marginTop="16dp"
+        android:clipToPadding="false"
+        android:nestedScrollingEnabled="false"
+        android:orientation="vertical"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="8dp" />
+</RelativeLayout>

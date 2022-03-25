@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="32dp"
+    android:paddingTop="32dp"
+    android:paddingBottom="16dp">
+
+    <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="8dp"
+        app:fb_defaultColor="@color/grayLvlSeven"
+        app:fb_focusColor="@color/grayLvlNine"
+        app:fb_fontIconResource="&#xf060;"
+        app:fb_radius="8dp"
+        app:fb_text=""
+        app:fb_textColor="@color/white"
+        app:fb_textSize="16dp" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:fontFamily="@font/madani_bold"
+        android:text="Pendaftaran"
+        android:textColor="@color/black"
+        android:textSize="16dp" />
+</LinearLayout>

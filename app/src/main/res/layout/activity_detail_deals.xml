@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_theme_float_button" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="32dp"
+            android:paddingBottom="32dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxHeight="250dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder"
+                app:riv_border_color="#333333"
+                app:riv_border_width="0dp"
+                app:riv_corner_radius="8dp"
+                app:riv_mutate_background="false" />
+
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                app:alignContent="stretch"
+                app:alignItems="stretch"
+                app:flexWrap="wrap"
+                app:justifyContent="flex_start">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/badge_light"
+                    android:fontFamily="@font/madani_medium"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="2dp"
+                    android:text="#JagonyaAyam"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/badge_light"
+                    android:fontFamily="@font/madani_medium"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="2dp"
+                    android:text="#KFCJuara"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/badge_light"
+                    android:fontFamily="@font/madani_medium"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="2dp"
+                    android:text="#Ayam"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/badge_light"
+                    android:fontFamily="@font/madani_medium"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="2dp"
+                    android:text="#KFCDiskon"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/badge_light"
+                    android:fontFamily="@font/madani_medium"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="2dp"
+                    android:text="#KFCSpesial"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/badge_light"
+                    android:fontFamily="@font/madani_medium"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="2dp"
+                    android:text="#KFC"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+            </com.google.android.flexbox.FlexboxLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/madani_bold"
+                android:text="Promo KFC Special 5 Diskon 50%"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toLeftOf="@+id/discount"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/madani_bold"
+                        android:paddingTop="4dp"
+                        android:text="Rp"
+                        android:textColor="@color/red"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:fontFamily="@font/madani_bold"
+                        android:text="38.182"
+                        android:textColor="@color/red"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/price_old"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:fontFamily="@font/madani_medium"
+                        android:text="Rp 54.000"
+                        android:textColor="@color/grayLvlEight"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/badge_primary"
+                    android:fontFamily="@font/madani_medium"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="2dp"
+                    android:text="Discount 10%"
+                    android:textColor="@color/white"
+                    android:textSize="10dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/time" />
+
+                <TextView
+                    android:id="@+id/expired"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:fontFamily="@font/madani_light"
+                    android:text="Period 30 April 2022"
+                    android:textColor="@color/grayLvlEight"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:orientation="horizontal">
+
+                <mehdi.sakout.fancybuttons.FancyButton
+                    android:id="@+id/bookmark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/action"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_weight="0.4"
+                    android:fontFamily="@font/madani_medium"
+                    android:paddingVertical="14dp"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="32dp"
+                    app:fb_defaultColor="@color/colorPrimary"
+                    app:fb_focusColor="@color/colorPrimaryDark"
+                    app:fb_radius="8dp"
+                    app:fb_text="Bookmark"
+                    app:fb_textColor="@color/white"
+                    app:fb_textSize="16dp" />
+
+                <mehdi.sakout.fancybuttons.FancyButton
+                    android:id="@+id/compare"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/action"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginHorizontal="4dp"
+                    android:layout_weight="0.4"
+                    android:fontFamily="@font/madani_medium"
+                    android:paddingVertical="14dp"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="32dp"
+                    app:fb_borderColor="@color/colorPrimary"
+                    app:fb_borderWidth="1dp"
+                    app:fb_defaultColor="@color/white"
+                    app:fb_focusColor="@color/colorAccent"
+                    app:fb_radius="8dp"
+                    app:fb_text="Compare"
+                    app:fb_textColor="@color/colorPrimary"
+                    app:fb_textSize="16dp" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/border_round_soft"
+                android:padding="16dp">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/image_shop"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginRight="16dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder"
+                    app:riv_border_color="#333333"
+                    app:riv_border_width="0dp"
+                    app:riv_corner_radius="8dp"
+                    app:riv_mutate_background="false"
+                    app:riv_oval="true" />
+
+                <TextView
+                    android:id="@+id/name_shop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/image_shop"
+                    android:fontFamily="@font/madani_bold"
+                    android:text="KFC Official"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/follower_shop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/name_shop"
+                    android:layout_marginTop="4dp"
+                    android:layout_toRightOf="@+id/image_shop"
+                    android:fontFamily="@font/madani_light"
+                    android:text="132 Followers"
+                    android:textColor="@color/grayLvlEight"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/detail_shop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:fontFamily="@font/madani_bold"
+                    android:text="View Pages"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/border_round_soft"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/madani_medium"
+                    android:text="Description"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/madani_light"
+                    android:justificationMode="inter_word"
+                    android:lineSpacingMultiplier="1.6"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and
+typesetting industry. Lorem Ipsum has been the industry's
+standard dummy text ever since the 1500s, when an
+unknown printer took a galley of type and scrambled it to
+make a type specimen book. It has survived not only five
+centuries, but also the leap into electronic typesetting,
+remaining essentially unchanged. It was popularised in
+the 1960s with the release of Letraset sheets containing
+Lorem Ipsum passages, and more recently with desktop
+publishing software like Aldus PageMaker including
+versions of Lorem Ipsum."
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/border_round_soft"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/madani_medium"
+                    android:text="Get This Deal on These Platforms"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_platform"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:clipToPadding="false"
+                    android:nestedScrollingEnabled="false"
+                    android:orientation="vertical"
+                    android:paddingVertical="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/border_round_soft"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/madani_medium"
+                    android:text="Get This Deal at These Locations"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/madani_light"
+                    android:justificationMode="inter_word"
+                    android:lineSpacingMultiplier="1.6"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and
+typesetting industry. Lorem Ipsum has been the industry's
+standard dummy text ever since the 1500s, when an"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/border_round_soft"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/madani_medium"
+                    android:text="Term and Condition"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/madani_light"
+                    android:justificationMode="inter_word"
+                    android:lineSpacingMultiplier="1.6"
+                    android:text="Lorem Ipsum is simply dummy text of the printing and
+typesetting industry. Lorem Ipsum has been the industry's
+standard dummy text ever since the 1500s, when an"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+            </LinearLayout>
+
+            <include layout="@layout/card_interest_deals" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

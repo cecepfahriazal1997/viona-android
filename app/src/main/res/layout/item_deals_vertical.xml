@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:background="@drawable/border_round_soft"
+    android:orientation="vertical"
+    android:padding="1dp">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_weight="0.3"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/placeholder"
+        app:riv_border_color="#333333"
+        app:riv_border_width="0dp"
+        app:riv_corner_radius_top_right="8dp"
+        app:riv_corner_radius_top_left="8dp"
+        app:riv_mutate_background="false" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/madani_bold"
+            android:text="Promo KFC Special 5 Diskon 50%"
+            android:textColor="@color/black"
+            android:textSize="14dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:fontFamily="@font/madani_bold"
+                android:paddingTop="4dp"
+                android:text="Rp"
+                android:textColor="@color/red"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:fontFamily="@font/madani_bold"
+                android:text="38.182"
+                android:textColor="@color/red"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/price_old"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:fontFamily="@font/madani_medium"
+                android:text="Rp 54.000"
+                android:textColor="@color/grayLvlEight"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/owner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/madani_medium"
+                android:text="KFC"
+                android:textColor="@color/grayLvlNine"
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/badge_primary"
+                android:fontFamily="@font/madani_medium"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="2dp"
+                android:text="Discount 10%"
+                android:textColor="@color/white"
+                android:textSize="10dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/expired"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/madani_light"
+            android:text="Period 30 April 2022"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/grayLvlSeven"
+            android:textSize="12dp" />
+    </LinearLayout>
+</LinearLayout>
