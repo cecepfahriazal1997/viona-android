@@ -47,7 +47,7 @@ public class DealsAdapter extends RecyclerView.Adapter<DealsAdapter.ViewHolder> 
             holder.discount.setVisibility(View.GONE);
             holder.priceOld.setVisibility(View.GONE);
         } else {
-            holder.discount.setText("Discount " + item.getDiscount() + "%");
+            holder.discount.setText(item.getDiscount() + "% OFF");
             holder.priceOld.setText("Rp " + String.format("%,.0f", item.getPriceOld()));
         }
         holder.period.setText(item.getPeriod());

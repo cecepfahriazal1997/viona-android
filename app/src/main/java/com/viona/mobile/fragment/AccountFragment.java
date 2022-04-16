@@ -6,15 +6,16 @@ import android.os.Looper;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.viona.mobile.R;
 import com.viona.mobile.activity.Dashboard;
 import com.viona.mobile.activity.Login;
+import com.viona.mobile.activity.PageManager;
 import com.viona.mobile.adapter.SettingsAdapter;
 import com.viona.mobile.model.SettingsModel;
 
@@ -35,6 +36,7 @@ public class AccountFragment extends Fragment implements View.OnClickListener {
     private SettingsAdapter SettingsAdapter;
     private List<SettingsModel> list = new ArrayList<>();
     private FancyButton logout;
+    private RelativeLayout contentPageCreate;
 
     public AccountFragment() {
     }
@@ -57,8 +59,10 @@ public class AccountFragment extends Fragment implements View.OnClickListener {
     private void findView(View rootView) {
         lists = rootView.findViewById(R.id.list);
         logout = rootView.findViewById(R.id.logout);
+        contentPageCreate = rootView.findViewById(R.id.content_manage_create);
 
         logout.setOnClickListener(this::onClick);
+        contentPageCreate.setOnClickListener(this::onClick);
     }
 
     private void init() {
@@ -127,6 +131,9 @@ public class AccountFragment extends Fragment implements View.OnClickListener {
         switch (v.getId()) {
             case R.id.logout:
                 parent.functionHelper.startIntent(Login.class, true, null);
+                break;
+            case R.id.content_manage_create:
+                parent.functionHelper.startIntent(PageManager.class, false, null);
                 break;
         }
     }

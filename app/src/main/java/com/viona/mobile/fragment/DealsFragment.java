@@ -28,7 +28,7 @@ public class DealsFragment extends Fragment implements View.OnClickListener {
     private Dashboard parent;
     private Handler handler;
     private final boolean isVisible = true;
-    private RecyclerView listRecomended, listLatest;
+    private RecyclerView lists;
     private DealsAdapter dealsAdapter;
     private List<DealsModel> listDeals = new ArrayList<>();
 
@@ -51,7 +51,7 @@ public class DealsFragment extends Fragment implements View.OnClickListener {
     }
 
     private void findView(View rootView) {
-        listLatest = rootView.findViewById(R.id.list);
+        lists = rootView.findViewById(R.id.list);
     }
 
     private void initDeals() {
@@ -128,8 +128,8 @@ public class DealsFragment extends Fragment implements View.OnClickListener {
             }
         });
 
-        listLatest.setLayoutManager(staggeredGridLayoutManager);
-        listLatest.setAdapter(dealsAdapter);
+        lists.setLayoutManager(staggeredGridLayoutManager);
+        lists.setAdapter(dealsAdapter);
     }
 
     @Override

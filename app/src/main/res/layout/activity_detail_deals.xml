@@ -21,18 +21,38 @@
             android:paddingHorizontal="32dp"
             android:paddingBottom="32dp">
 
-            <com.makeramen.roundedimageview.RoundedImageView
-                android:id="@+id/image"
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                android:maxHeight="250dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/placeholder"
-                app:riv_border_color="#333333"
-                app:riv_border_width="0dp"
-                app:riv_corner_radius="8dp"
-                app:riv_mutate_background="false" />
+                android:layout_height="wrap_content">
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:maxHeight="250dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder"
+                    app:riv_border_color="#333333"
+                    app:riv_border_width="0dp"
+                    app:riv_corner_radius="8dp"
+                    app:riv_mutate_background="false" />
+
+                <TextView
+                    android:id="@+id/discount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-24dp"
+                    android:layout_below="@+id/image"
+                    android:background="@color/colorPrimaryTransparent"
+                    android:fontFamily="@font/madani_bold"
+                    android:gravity="center"
+                    android:paddingHorizontal="8dp"
+                    android:textSize="12dp"
+                    android:paddingVertical="4dp"
+                    android:text="10% OFF"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
 
             <com.google.android.flexbox.FlexboxLayout
                 android:layout_width="match_parent"
@@ -140,7 +160,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
-                    android:layout_toLeftOf="@+id/discount"
                     android:orientation="horizontal">
 
                     <TextView
@@ -175,20 +194,6 @@
                         android:textSize="12dp" />
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/discount"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="8dp"
-                    android:background="@drawable/badge_primary"
-                    android:fontFamily="@font/madani_medium"
-                    android:paddingHorizontal="8dp"
-                    android:paddingVertical="2dp"
-                    android:text="Discount 10%"
-                    android:textColor="@color/white"
-                    android:textSize="10dp" />
             </RelativeLayout>
 
             <LinearLayout

@@ -36,15 +36,17 @@
             android:layout_toLeftOf="@+id/filter"
             android:layout_toRightOf="@+id/back" />
 
-        <ImageButton
+        <mehdi.sakout.fancybuttons.FancyButton
             android:id="@+id/filter"
             android:layout_width="?android:actionBarSize"
             android:layout_height="?android:actionBarSize"
             android:layout_alignParentRight="true"
-            android:background="@drawable/form_radio"
-            android:padding="13dp"
-            android:src="@drawable/filter"
-            android:tint="@color/grayLvlEight" />
+            app:fb_defaultColor="@color/graySmooth"
+            app:fb_focusColor="@color/colorPrimaryDark"
+            app:fb_fontIconResource="&#xf0b0;"
+            app:fb_radius="8dp"
+            app:fb_text=""
+            app:fb_textColor="@color/grayLvlSeven" />
 
     </RelativeLayout>
 

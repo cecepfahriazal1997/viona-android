@@ -5,7 +5,6 @@ import android.view.View;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.viona.mobile.R;
 import com.viona.mobile.adapter.DealsAdapter;
@@ -45,6 +44,7 @@ public class DetailDeals extends Master implements View.OnClickListener {
     }
 
     private void init() {
+        title.setText("Deal Detail");
         back.setOnClickListener(this::onClick);
     }
 

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <RelativeLayout
+            android:id="@+id/btnImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/image"
+                android:layout_width="92dp"
+                android:layout_height="92dp"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/placeholder"
+                app:riv_border_color="#333333"
+                app:riv_border_width="0dp"
+                app:riv_corner_radius="8dp"
+                app:riv_mutate_background="false"
+                app:riv_oval="true" />
+
+            <ImageButton
+                android:id="@+id/file_picker"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="-32dp"
+                android:layout_toRightOf="@+id/image"
+                android:background="@drawable/circle_primary"
+                android:padding="8dp"
+                android:src="@drawable/camera"
+                android:tint="@color/white" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/madani_medium"
+            android:text="200 Followers"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:textSize="14dp" />
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/follower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/action"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/madani_medium"
+            android:paddingVertical="8dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            app:fb_defaultColor="@color/colorPrimary"
+            app:fb_focusColor="@color/colorPrimaryDark"
+            app:fb_radius="8dp"
+            app:fb_text="Manage Follower"
+            app:fb_textColor="@color/white"
+            app:fb_textSize="12dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/madani_medium"
+            android:text="Name"
+            android:textColor="@color/grayLvlNine"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/form_control"
+            android:drawableTint="@color/grayLvlSeven"
+            android:fontFamily="@font/madani_medium"
+            android:hint="Enter page name here ..."
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp"
+            android:singleLine="true"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/madani_medium"
+            android:text="Description"
+            android:textColor="@color/grayLvlNine"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/form_control"
+            android:drawableTint="@color/grayLvlSeven"
+            android:fontFamily="@font/madani_medium"
+            android:gravity="top"
+            android:hint="Enter description of page here ..."
+            android:lines="4"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp"
+            android:textSize="14dp" />
+
+        <RelativeLayout
+            android:id="@+id/pick_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/form_radio"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:fontFamily="@font/madani_medium"
+                android:text="Country"
+                android:textColor="@color/grayLvlNine"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/label"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="4dp"
+                android:layout_toLeftOf="@+id/arrow_right"
+                android:fontFamily="@font/madani_medium"
+                android:text="Choose country"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:id="@+id/arrow_right"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/arrow_right"
+                android:tint="@color/grayLvlEight" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/pick_province"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/form_radio"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/label_province"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:fontFamily="@font/madani_medium"
+                android:text="Province"
+                android:textColor="@color/grayLvlNine"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/province"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/label_province"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="4dp"
+                android:layout_toLeftOf="@+id/arrow_right_province"
+                android:fontFamily="@font/madani_medium"
+                android:text="Choose province"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:id="@+id/arrow_right_province"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/arrow_right"
+                android:tint="@color/grayLvlEight" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/pick_city"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/form_radio"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/label_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:fontFamily="@font/madani_medium"
+                android:text="City"
+                android:textColor="@color/grayLvlNine"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/label_city"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="4dp"
+                android:layout_toLeftOf="@+id/arrow_right_city"
+                android:fontFamily="@font/madani_medium"
+                android:text="Choose city"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:id="@+id/arrow_right_city"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:src="@drawable/arrow_right"
+                android:tint="@color/grayLvlEight" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/madani_medium"
+            android:text="Address"
+            android:textColor="@color/grayLvlNine"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/form_control"
+            android:drawableTint="@color/grayLvlSeven"
+            android:fontFamily="@font/madani_medium"
+            android:gravity="top"
+            android:hint="Enter address here ..."
+            android:lines="4"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp"
+            android:textSize="14dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/madani_medium"
+            android:text="Postal Code"
+            android:textColor="@color/grayLvlNine"
+            android:textSize="14dp" />
+
+        <EditText
+            android:id="@+id/postal_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/form_control"
+            android:drawableTint="@color/grayLvlSeven"
+            android:fontFamily="@font/madani_medium"
+            android:hint="Enter postal code here ..."
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="16dp"
+            android:singleLine="true"
+            android:textSize="14dp" />
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/action"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/madani_medium"
+            android:paddingVertical="14dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            app:fb_defaultColor="@color/colorPrimary"
+            app:fb_focusColor="@color/colorPrimaryDark"
+            app:fb_radius="8dp"
+            app:fb_text="Save"
+            app:fb_textColor="@color/white"
+            app:fb_textSize="16dp" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

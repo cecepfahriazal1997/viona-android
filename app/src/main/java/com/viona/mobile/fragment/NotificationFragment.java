@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.viona.mobile.R;
 import com.viona.mobile.activity.Dashboard;
-import com.viona.mobile.activity.Login;
 import com.viona.mobile.adapter.NotificationAdapter;
 import com.viona.mobile.model.NotificationModel;
 
@@ -116,9 +115,6 @@ public class NotificationFragment extends Fragment implements View.OnClickListen
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.logout:
-                parent.functionHelper.startIntent(Login.class, true, null);
-                break;
         }
     }
 }

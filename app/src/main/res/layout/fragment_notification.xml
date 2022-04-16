@@ -26,8 +26,7 @@
             layout="@layout/toolbar_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="32dp"
-            android:layout_toLeftOf="@+id/filter" />
+            android:layout_marginHorizontal="32dp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/list"

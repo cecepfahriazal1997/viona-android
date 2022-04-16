@@ -63,6 +63,16 @@
             android:screenOrientation="portrait"
             android:theme="@style/MaterialComponent"
             android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.PageManager"
+            android:screenOrientation="portrait"
+            android:theme="@style/MaterialComponent"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".activity.ManageFollower"
+            android:screenOrientation="portrait"
+            android:theme="@style/MaterialComponent"
+            android:windowSoftInputMode="stateAlwaysHidden" />
     </application>
 
 </manifest>

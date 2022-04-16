@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/toolbar" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="32dp"
+                android:paddingBottom="32dp">
+
+                <RelativeLayout
+                    android:id="@+id/btnImage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="32dp">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/image"
+                        android:layout_width="200dp"
+                        android:layout_height="100dp"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="16dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/placeholder"
+                        app:riv_border_color="#333333"
+                        app:riv_border_width="0dp"
+                        app:riv_corner_radius="8dp"
+                        app:riv_mutate_background="false" />
+
+                    <ImageButton
+                        android:id="@+id/file_picker"
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="-32dp"
+                        android:layout_toRightOf="@+id/image"
+                        android:background="@drawable/circle_primary"
+                        android:padding="8dp"
+                        android:src="@drawable/camera"
+                        android:tint="@color/white" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/madani_medium"
+                    android:text="Title"
+                    android:textColor="@color/grayLvlNine"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/form_control"
+                    android:drawableTint="@color/grayLvlSeven"
+                    android:fontFamily="@font/madani_medium"
+                    android:hint="Enter title of deals here ..."
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="16dp"
+                    android:singleLine="true"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/madani_medium"
+                    android:text="Description"
+                    android:textColor="@color/grayLvlNine"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/form_control"
+                    android:drawableTint="@color/grayLvlSeven"
+                    android:fontFamily="@font/madani_medium"
+                    android:gravity="top"
+                    android:hint="Enter last name ..."
+                    android:lines="4"
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="16dp"
+                    android:textSize="14dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/form_radio"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:fontFamily="@font/madani_medium"
+                        android:text="Price of Deals"
+                        android:textColor="@color/grayLvlNine"
+                        android:textSize="14dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="16dp"
+                        android:background="@color/graySmooth" />
+
+                    <EditText
+                        android:id="@+id/original_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/form_control"
+                        android:drawableTint="@color/grayLvlSeven"
+                        android:fontFamily="@font/madani_medium"
+                        android:hint="Enter original price here ..."
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="16dp"
+                        android:singleLine="true"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/promo_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/form_control"
+                        android:drawableTint="@color/grayLvlSeven"
+                        android:fontFamily="@font/madani_medium"
+                        android:hint="Enter promo price here ..."
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="16dp"
+                        android:singleLine="true"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/form_radio"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:fontFamily="@font/madani_medium"
+                        android:text="Expired Time"
+                        android:textColor="@color/grayLvlNine"
+                        android:textSize="14dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginVertical="16dp"
+                        android:background="@color/graySmooth" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:textColor="@color/grayLvlNine">
+
+                        <EditText
+                            android:id="@+id/start_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/form_control_group_left"
+                            android:drawableTint="@color/grayLvlSeven"
+                            android:focusable="false"
+                            android:fontFamily="@font/madani_medium"
+                            android:hint="Choose Start Date"
+                            android:paddingHorizontal="16dp"
+                            android:paddingVertical="16dp"
+                            android:singleLine="true"
+                            android:textSize="14dp" />
+
+                        <ImageButton
+                            android:id="@+id/pick_start_date"
+                            android:layout_width="48dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_group_right"
+                            android:scaleType="center"
+                            android:src="@drawable/date" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:textColor="@color/grayLvlNine">
+
+                        <EditText
+                            android:id="@+id/end_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/form_control_group_left"
+                            android:drawableTint="@color/grayLvlSeven"
+                            android:focusable="false"
+                            android:fontFamily="@font/madani_medium"
+                            android:hint="Choose End Date"
+                            android:paddingHorizontal="16dp"
+                            android:paddingVertical="16dp"
+                            android:singleLine="true"
+                            android:textSize="14dp" />
+
+                        <ImageButton
+                            android:id="@+id/pick_end_date"
+                            android:layout_width="48dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/button_group_right"
+                            android:scaleType="center"
+                            android:src="@drawable/date" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="8dp"
+                    android:fontFamily="@font/madani_medium"
+                    android:text="Date of Birth"
+                    android:textColor="@color/grayLvlNine"
+                    android:textSize="14dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:textColor="@color/grayLvlNine">
+
+                    <EditText
+                        android:id="@+id/date_birth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/form_control_group_left"
+                        android:drawableTint="@color/grayLvlSeven"
+                        android:focusable="false"
+                        android:fontFamily="@font/madani_medium"
+                        android:hint="Choose Date of Birth"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="16dp"
+                        android:singleLine="true"
+                        android:textSize="14dp" />
+
+                    <ImageButton
+                        android:id="@+id/pick_date"
+                        android:layout_width="48dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/button_group_right"
+                        android:scaleType="center"
+                        android:src="@drawable/date" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="8dp"
+                    android:fontFamily="@font/madani_medium"
+                    android:text="Email"
+                    android:textColor="@color/grayLvlNine"
+                    android:textSize="14dp" />
+
+                <EditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/form_control_group_left"
+                    android:drawableTint="@color/grayLvlSeven"
+                    android:hint="Enter email ..."
+                    android:paddingHorizontal="16dp"
+                    android:paddingVertical="16dp"
+                    android:singleLine="true"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="8dp"
+                    android:fontFamily="@font/madani_medium"
+                    android:text="Phone Number"
+                    android:textColor="@color/grayLvlNine"
+                    android:textSize="14dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    android:textColor="@color/grayLvlNine">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/form_radio"
+                        android:fontFamily="@font/madani_bold"
+                        android:gravity="center"
+                        android:text="+62"
+                        android:textColor="@color/grayLvlNine"
+                        android:textSize="16dp" />
+
+                    <EditText
+                        android:id="@+id/phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/form_control_group_left"
+                        android:drawableTint="@color/grayLvlSeven"
+                        android:fontFamily="@font/madani_medium"
+                        android:hint="Enter phone number ..."
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="16dp"
+                        android:singleLine="true"
+                        android:textSize="14dp" />
+                </LinearLayout>
+
+                <mehdi.sakout.fancybuttons.FancyButton
+                    android:id="@+id/submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/action"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="32dp"
+                    android:fontFamily="@font/madani_medium"
+                    android:paddingVertical="14dp"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="32dp"
+                    app:fb_defaultColor="@color/colorPrimary"
+                    app:fb_focusColor="@color/colorPrimaryDark"
+                    app:fb_radius="8dp"
+                    app:fb_text="Register"
+                    app:fb_textColor="@color/white"
+                    app:fb_textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/madani_medium"
+                    android:text="Already have an account?"
+                    android:textColor="@color/grayLvlNine"
+                    android:textSize="14dp" />
+
+                <mehdi.sakout.fancybuttons.FancyButton
+                    android:id="@+id/login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/action"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/madani_medium"
+                    android:paddingVertical="14dp"
+                    android:paddingLeft="32dp"
+                    android:paddingRight="32dp"
+                    app:fb_defaultColor="@color/grayLvlFive"
+                    app:fb_focusColor="@color/grayLvlEight"
+                    app:fb_radius="8dp"
+                    app:fb_text="Login"
+                    app:fb_textColor="@color/grayLvlNine"
+                    app:fb_textSize="16dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
